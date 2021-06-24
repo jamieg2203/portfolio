@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    background: rgb(2,62,138);
+    background: linear-gradient(194deg, rgba(2,62,138,1) 21%, rgba(0,150,199,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 900px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: white;
+}
+
+#nav-bar {
+    grid-area: nav;
+}
+
+header {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 5fr 5fr 1fr;
+    grid-template-rows: 10rem;
+    grid-template-areas: ". nav .";
+    align-items: center;
+    justify-items: end;
+}
+
+header li {
+    list-style-position: outside;
+    display: inline-block;
+    padding: 2rem;
+    font-size: 2rem;
+
+}
+.social {
+    grid-area: social;
+    text-align: center;
+}
+
+.intro {
+    grid-area: intro;
+    text-align: center;
+}
+
+.intro p {
+    font-style: italic;
+    font-size: 2rem;
+    margin-bottom: 0px;
+}
+
+.intro h1 {
+    font-weight: bold;
+    font-size: 5rem;
+    margin-top: 0px;
+}
+
+#jamie-banner {
+    grid-area: jamie-banner;
+    text-align: center;
+    align-self: flex-end;
+    max-width: 25%;
+
+}
+
+.skills {
+    grid-area: skills;
+}
+
+#jamie-banner img {
+    width: 37rem;
+    height: auto;
+}
+
+#banner {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(10rem, auto);
+    grid-template-areas:
+        ". . . jamie-banner jamie-banner jamie-banner . . ."
+        "intro intro intro jamie-banner jamie-banner jamie-banner skills skills skills"
+        "intro intro intro jamie-banner jamie-banner jamie-banner skills skills skills"
+        "social social social jamie-banner jamie-banner jamie-banner skills skills skills"
+        ". . . jamie-banner jamie-banner jamie-banner . . ."
+
+}
