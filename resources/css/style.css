@@ -1,91 +1,68 @@
-html {
+html, body {
     height: 100%;
     font-size: 16px;
-}
-
-body {
-    background: rgb(2,62,138);
-    background: linear-gradient(194deg, rgba(2,62,138,1) 21%, rgba(0,150,199,1) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 900px;
-    font-family: 'Noto Sans JP', sans-serif;
-    color: white;
-}
-
-#nav-bar {
-    grid-area: nav;
+    margin: 0;
 }
 
 header {
-    max-width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 5fr 5fr 1fr;
-    grid-template-rows: 10rem;
-    grid-template-areas: ". nav .";
-    align-items: center;
-    justify-items: end;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background: rgb(8,0,147);
+    background: linear-gradient(22deg, rgba(8,0,147,1) 0%, rgba(95,95,255,1) 24%, rgba(0,159,255,1) 61%, rgba(0,2,61,1) 100%);
+
+    
 }
 
-header li {
-    list-style-position: outside;
-    display: inline-block;
-    padding: 2rem;
-    font-size: 2rem;
-
+.grid {
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "head main"
+                         "head main"
+                         "head main"
+                         "head footer";
 }
-.social {
-    grid-area: social;
+
+#nav-bar {
+    grid-area: head;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-content: space-around;
+    height: 100%;
 }
 
 .intro {
-    grid-area: intro;
-    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin: 2rem;
 }
 
-.intro p {
-    font-style: italic;
+#naviation ul {
+    padding: 0;
+}
+
+#naviation li {
+    list-style: none;
     font-size: 2rem;
-    margin-bottom: 0px;
+    align-self: center;
+    margin: 0;
+    padding: 2rem 0;
 }
 
-.intro h1 {
-    font-weight: bold;
-    font-size: 5rem;
-    margin-top: 0px;
+#main {
+    grid-area: main;
 }
 
-#jamie-banner {
-    grid-area: jamie-banner;
-    text-align: center;
-    align-self: flex-end;
-    max-width: 25%;
-
+#footer {
+    grid-area: footer;
 }
 
-.skills {
-    grid-area: skills;
-}
-
-#jamie-banner img {
-    width: 37rem;
+#headshot img{
+    width: 15rem;
     height: auto;
-}
-
-#banner {
-    max-width: 90%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: minmax(10rem, auto);
-    grid-template-areas:
-        ". . . jamie-banner jamie-banner jamie-banner . . ."
-        "intro intro intro jamie-banner jamie-banner jamie-banner skills skills skills"
-        "intro intro intro jamie-banner jamie-banner jamie-banner skills skills skills"
-        "social social social jamie-banner jamie-banner jamie-banner skills skills skills"
-        ". . . jamie-banner jamie-banner jamie-banner . . ."
-
+    border-radius: 180px;
+    margin: 2rem;
 }
